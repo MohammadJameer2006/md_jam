@@ -1,0 +1,23 @@
+{
+  "name": "md-jam",
+  "version": "1.0.0",
+  "description": "this is a demo file",
+  "repository": {
+    "type": "git",
+    "url": "\\"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "file.js",
+  "scripts": {
+    "start": "nodemon file.js",
+    ""
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
