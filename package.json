@@ -11,9 +11,10 @@
   "type": "commonjs",
   "main": "file.js",
   "scripts": {
-    "start": "nodemon file.js",
-    ""
+    "start": "nodemon file.js"
+  
   },
+
   "dependencies": {
     "express": "^5.2.1"
   },
