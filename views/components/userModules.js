@@ -17,5 +17,12 @@ const userSchema=new mongoose.Schema({
     },
     ],
 });
-const User =mongoose.model("User",userSchema,"myusers") // considered as users
-module.exports=User
+userSchema.pre("find",function(next){
+    console.log(" ~ find Query is Trigeered:");
+    next;
+});
+userSchema.post("UpdateOne",function(){
+    console.log(" ~ Update Completed:");
+    });
+const User =mongoose.model("User",userSchema) // considered as users
+module.exports=User;
