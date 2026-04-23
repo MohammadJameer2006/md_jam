@@ -17,3 +17,13 @@ exports.createEmployees = (req,res) =>{
     res.send("Data inserted");
 
 };
+exports.aggSample = async (req,res)=>{
+    const aggregatedData = await EmployeesModel.aggregate([
+        {$project:{department: 1}},
+        {$group: {_id: "$deparment", ount: {$sum :1}}},
+        {match:{_id: "IT"}},
+        {$limit: 2},
+        {$sort: {_id: -1}},
+    ]);
+    res.json(aggregatedData);
+};
